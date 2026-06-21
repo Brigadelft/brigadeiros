@@ -7,22 +7,99 @@
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:Arial,sans-serif;background:#fffaf5;color:#333;line-height:1.6}
-header{background:#87CEEB;color:white;text-align:center;padding:35px 20px}
+
+header{
+background:linear-gradient(135deg,#87CEEB,#6bb6d8);
+color:white;
+text-align:center;
+padding:35px 20px;
+}
+
 .logo{width:260px;height:320px;border:none;background:white;border-radius:15px;margin-bottom:15px}
-.hero{padding:50px 20px;text-align:center;max-width:1000px;margin:auto}
-.hero h2{font-size:2rem;margin-bottom:20px;color:#4b2e1e}
-.hero img{width:100%;max-width:450px;border-radius:20px;box-shadow:0 5px 15px rgba(0,0,0,.2);margin:25px 0}
-.about{background:white;padding:50px 20px}
+
+.hero,.about,.process{padding:50px 20px}
 .container{max-width:1000px;margin:auto}
-.about h2,.process h2{color:#4b2e1e;margin-bottom:20px}
-.cards{display:flex;gap:20px;flex-wrap:wrap;margin-top:30px}
-.card{flex:1;min-width:250px;background:#fff4eb;padding:20px;border-radius:15px}
-.process{padding:50px 20px;background:#fdf6ef}
-.process ul{max-width:800px;margin:20px auto;padding-left:25px}
-footer{background:#87CEEB;color:white;text-align:center;padding:25px}
+
+.hero{text-align:center;max-width:1000px;margin:auto}
+.hero h2,.about h2,.process h2{color:#4b2e1e;margin-bottom:20px}
+
+.process{background:#fdf6ef}
+.process-content{
+display:flex;
+align-items:center;
+gap:30px;
+max-width:900px;
+margin:auto;
+}
+
+.process-text{flex:1}
+.process ul{margin:20px 0;padding-left:25px}
+
+.process-img{
+width:260px;
+border-radius:20px;
+box-shadow:0 8px 25px rgba(0,0,0,.15);
+}
+
+.features{
+padding:60px 20px;
+background:white;
+}
+
+.cards{
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+margin-top:20px;
+}
+
+.card{
+flex:1;
+min-width:250px;
+background:#fff4eb;
+padding:25px;
+border-radius:20px;
+box-shadow:0 4px 12px rgba(0,0,0,.08);
+text-align:center;
+}
+
+.card h3{margin-bottom:10px}
+
+footer{
+background:linear-gradient(135deg,#87CEEB,#6bb6d8);
+color:white;
+padding:45px 20px;
+}
+
+.footer-content{
+max-width:1000px;
+margin:auto;
+text-align:center;
+}
+
+.footer-icons{
+margin-top:25px;
+display:flex;
+justify-content:center;
+gap:15px;
+flex-wrap:wrap;
+}
+
+.footer-icons span{
+background:rgba(255,255,255,.18);
+padding:10px 18px;
+border-radius:999px;
+backdrop-filter:blur(5px);
+}
+
+@media(max-width:768px){
+.process-content{flex-direction:column}
+.process-img{width:200px}
+}
 </style>
 </head>
 <body>
+
 <header>
 <embed src="Logo_2.pdf" class="logo" type="application/pdf">
 <h1>BRIGADELFT</h1>
@@ -32,13 +109,16 @@ footer{background:#87CEEB;color:white;text-align:center;padding:25px}
 <section class="hero">
 <h2>Wat zijn brigadeiros?</h2>
 <p>Brigadeiros zijn een populair Braziliaans toetje gemaakt van gecondenseerde melk, cacao en chocolade.</p>
-<img src="brigadeiro.jpeg" alt="Brigadeiros van BRIGADELFT">
 <p>Bij BRIGADELFT maken wij verse brigadeiros met veel zorg, passie en een vleugje Braziliaanse gezelligheid.</p>
 </section>
 
 <section class="process">
 <h2>Hoe worden onze brigadeiros gemaakt?</h2>
+
+<div class="process-content">
+<div class="process-text">
 <p>Elke brigadeiro wordt met de hand gemaakt volgens een traditioneel Braziliaans recept.</p>
+
 <ul>
 <li>🥛 Gecondenseerde melk, cacao en boter worden langzaam verwarmd.</li>
 <li>🍫 Het mengsel wordt geroerd tot het heerlijk romig en stevig is.</li>
@@ -46,24 +126,51 @@ footer{background:#87CEEB;color:white;text-align:center;padding:25px}
 <li>🙌 Vervolgens rollen we er kleine balletjes van met de hand.</li>
 <li>✨ Tot slot worden ze bedekt met chocoladehagel voor de perfecte smaak.</li>
 </ul>
+
 <p>Het resultaat? Een zachte, smeuïge lekkernij die je niet snel vergeet!</p>
+</div>
+
+<img src="brigadeiro.jpeg" alt="Brigadeiros maken" class="process-img">
+</div>
 </section>
 
-<section class="about">
+<section class="features">
 <div class="container">
-<h2>Over ons</h2>
-<p>BRIGADELFT is een klein bedrijf uit Delft dat wordt gerund door drie ondernemende kinderen. Wij brengen een stukje Brazilië naar Nederland met onze handgemaakte brigadeiros.</p>
+<h2>Waarom BRIGADELFT?</h2>
+
 <div class="cards">
-<div class="card"><h3>🇧🇷 Braziliaanse traditie</h3><p>Origineel recept met authentieke smaken.</p></div>
-<div class="card"><h3>🍫 Verse ingrediënten</h3><p>Met liefde gemaakt van kwaliteitsproducten.</p></div>
-<div class="card"><h3>🏙️ Uit Delft</h3><p>Lokaal gemaakt en vers bereid.</p></div>
+<div class="card">
+<h3>🏰 Delftse trots</h3>
+<p>Handgemaakt in Delft met een vleugje Braziliaanse gezelligheid.</p>
+</div>
+
+<div class="card">
+<h3>🇧🇷 Authentiek recept</h3>
+<p>Traditionele brigadeiros zoals je ze in Brazilië vindt.</p>
+</div>
+
+<div class="card">
+<h3>🍫 Premium ingrediënten</h3>
+<p>Altijd vers bereid met kwaliteitsproducten.</p>
+</div>
 </div>
 </div>
 </section>
 
 <footer>
-<h3>BRIGADELFT</h3>
-<p>Braziliaanse brigadeiros met liefde gemaakt.</p>
+<div class="footer-content">
+<h3>🇧🇷 BRIGADELFT</h3>
+<p>Braziliaanse brigadeiros met liefde gemaakt in Delft.</p>
+
+<div class="footer-icons">
+<span>🏰 Delft</span>
+<span>🚲 Lokaal</span>
+<span>🍫 Vers gemaakt</span>
+<span>🇧🇷 Braziliaans recept</span>
+<span>✨ Handgemaakt</span>
+</div>
+</div>
 </footer>
+
 </body>
 </html>
